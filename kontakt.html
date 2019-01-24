@@ -16,11 +16,11 @@
                 <ul>
                     <li class="dugmeMeni" onclick="prikaziMeni()"><i class="fas fa-bars"></i></li>
                     <div id="meni">
-                        <a href="index.html"><li class="current">Početna</li></a>
+                        <a href="index.html"><li>Početna</li></a>
                         <a href="bio.html"><li>Biografija</li></a>
                         <a href="galerija.html"><li>Galerija</li></a>
                         <a href="hobi.html"><li>Hobi</li></a>
-                        <a href="kontakt.html"><li>Kontakt</li></a>
+                        <a href="kontakt.html"><li class="current">Kontakt</li></a>
                     </div>
                 </ul>
             </nav>
@@ -30,25 +30,31 @@
         </header>
 
         <section class="pocetna1">
-            <h2><i class="fas fa-user-tie"></i><br>Ukratko o meni</h2>
-            <article>
-                <img src="https://via.placeholder.com/150" alt="Profilna slika" class="profilna">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio vitae illo, error ex omnis molestiae culpa, modi beatae quae impedit porro perferendis, ipsa possimus saepe repudiandae! In, minus animi. Nobis sequi voluptatem eaque at.</p>
-            </article>
-            <button>Detaljnije o meni <i class="fas fa-arrow-alt-circle-right"></i></button>
+            <h2><i class="fas fa-info-circle"></i><br>Kontakt informacije</h2>
+            <div class="contact">
+                <p><i class="fas fa-envelope"></i> lukanici@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +381 60 7133 466</p>
+                <p><i class="fas fa-map-marker-alt"></i> Banijska 1/47, Zemun</p>
+            </div>
         </section>
 
         <section class="pocetna2">
-            <h2><i class="far fa-images"></i><br>Deo Galerije</h2>
+            <h2><i class="fas fa-file-signature"></i><br>Kontakt obrazac</h2>
             <br>
-            <div class="galerija">
-                <img src="https://via.placeholder.com/250" alt="Slika 1">
-                <img src="https://via.placeholder.com/250" alt="Slika 2">
-                <img src="https://via.placeholder.com/250" alt="Slika 3">
-                <img src="https://via.placeholder.com/250" alt="Slika 4">
+            <div class="contact">
+                <form action="#">
+                    <input type="text" name="ime" placeholder="Ime" required>
+                    <input type="text" name="prezime" placeholder="Prezime" required>
+                    <br>
+                    <input type="email" name="email" placeholder="Email adresa" required>
+                    <br>
+                    <input type="text" name="naslov" placeholder="Naslov poruke" required>
+                    <br>
+                    <textarea name="msg" id="poruka" cols="30" rows="10" placeholder="Poruka..." required></textarea>
+                    <br>
+                    <button type="submit"><i class="fas fa-location-arrow"></i> Pošalji</button>
+                </form>
             </div>
-            <br>
-            <button>Više u Galeriji <i class="fas fa-arrow-alt-circle-right"></i></button>
         </section>
 
         <footer>
@@ -61,7 +67,7 @@
         </footer>
     </div>
 
-    <a href="#vrh"><button id="idiGore"><i class="fas fa-arrow-alt-circle-up"></i></button></a>
+    <a href="#"><button id="idiGore"><i class="fas fa-arrow-alt-circle-up"></i></button></a>
 
     <script src="js/script.js"></script>
 </body>
