@@ -41,3 +41,32 @@ window.onscroll = function(e) {
     else
         idiGore.style.display = "none";
 }
+
+
+
+// --- SLAJDER ---------
+var slajder = document.getElementById('slajder');
+var slika = document.getElementById('slika');
+var br = 1;
+
+function otvoriSlajder(klik) {
+    slajder.style.display = 'block';
+    slika.src = klik.src;
+    br = klik.alt;
+}
+
+function slajderDesno() {
+    if (br == 12)
+        br = 0;
+    slika.src = `img/${++br}.jpg`;
+}
+
+function slajderLevo() {
+    if (br == 1)
+        br = 13;
+    slika.src = `img/${--br}.jpg`;
+}
+
+function slajderIzlaz() {
+    slajder.style.display = "none";
+}

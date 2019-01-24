@@ -294,10 +294,77 @@ footer p {
     font-size: 12pt;
 }
 
+.pocetna2 img {
+    cursor: pointer;
+}
 
 
 
 
+
+/* --- SLAJDER --- */
+#slajder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#slajderContainer {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background: var(--bela);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#slajder #izlaz {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    padding: 0;
+    z-index: 1;
+}
+
+#slajder #slika {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slajder #levo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    font-size: 50px;
+    border-radius: 0 50% 50% 0;
+    z-index: 1;
+}
+
+#slajder #desno {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    font-size: 50px;
+    border-radius: 50% 0 0 50%;
+    z-index: 1;
+}
 
 
 
