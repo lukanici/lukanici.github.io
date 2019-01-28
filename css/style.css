@@ -153,6 +153,7 @@ button {
     border-radius: 5px;
     color: var(--bela);
     border: none;
+    outline: none;
     cursor: pointer;
     transition: 0.2s ease-in-out;
     font-weight: 500;
@@ -207,6 +208,7 @@ footer p {
     padding: 10px;
     font-size: 30px;
     line-height: 0;
+    outline: none;
     display: none;
 }
 
