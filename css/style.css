@@ -21,9 +21,9 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    /*background: var(--tsiva);*/
-}
+/*body {
+    background: var(--tsiva);
+}*/
 
 .container {
     width: 100%;
@@ -455,12 +455,12 @@ footer p {
     }
 
     nav ul li:active {
-        background: var(--bela);
+        background: blue; /*var(--bela);*/
         color: var(--tcrvena);
     }
 
     nav ul li:hover {
-        background: var(--tcrvena);
+        background: yellow; /* var(--tcrvena);*/
         color: var(--bela);
     }
 }
