@@ -11,26 +11,29 @@ ispisiIme();
 setInterval(ispisiIme, 300);
 
 var meni = document.getElementById('meni');
+var lis = Array.from(document.getElementsByTagName('li'));
 var prikazan = false;
 function prikaziMeni() {
+    //meni.style.transition = "0.3s";
     if (prikazan) {
-        meni.style.display = "none";
+        meni.style.maxHeight = "0"; //meni.style.display = "none";
         prikazan = false;
     }
     else {
-        meni.style.display = "block";
+        meni.style.maxHeight = "500px"; //meni.style.display = "block";
         prikazan = true;
     }
 }
 
 window.onresize = function(e) {
     if (window.innerWidth > 616)
-        meni.style.display = "block";
+        meni.style.maxHeight = "500px"; //meni.style.display = "block";
     else {
+        //meni.style.transition = "0s";
         if (prikazan)
-            meni.style.display = "block";
+            meni.style.maxHeight = "500px"; //meni.style.display = "block";
         else
-            meni.style.display = "none";
+            meni.style.maxHeight = "0"; //meni.style.display = "none";
     }
 }
 

@@ -1,36 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Accessing Web Camera in JS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio - Početna strana</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<video id="video" width="500px" height="500px"></video>
-<canvas id="canvas" width="500px" height="500px"></canvas><br>
-<button onclick="snap();">Snap</button>
-<script type="text/javascript">
-			var video = document.getElementById('video');
-			var canvas = document.getElementById('canvas');
-			var context = canvas.getContext('2d');
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li class="dugmeMeni" onclick="prikaziMeni()"><i class="fas fa-bars"></i></li>
+                    <div id="meni">
+                        <a href="index.html"><li class="current">Početna</li></a>
+                        <a href="bio.html"><li>Biografija</li></a>
+                        <a href="galerija.html"><li>Galerija</li></a>
+                        <a href="hobi.html"><li>Hobi</li></a>
+                        <a href="kontakt.html"><li>Kontakt</li></a>
+                    </div>
+                </ul>
+            </nav>
+            <h3>Zdravo, ja sam</h3>
+            <h1 id="ime"></h1>
+            <h4><i class="fas fa-graduation-cap"></i> Student Visoke Škole Elektrotehinike i računarstva</h4>
+        </header>
 
-			navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia;
+        <section class="pocetna1">
+            <h2><i class="fas fa-user-tie"></i><br>Ukratko o meni</h2>
+            <article>
+                <img src="img/1.jpg" alt="Profilna slika" class="profilna">
+                <p>Moje ime je Luka Nićiforović. Rodjen sam 06.09.1998. u Kruševcu. Do 18 godine sam živeo u Trsteniku, a onda sam upisao Visoku školu elektrotehinike i računarstva. Sada živim i studiram u Beogradu. Trenutno radim kao full stack developer u firmi ArtData. U slobodno vreme igram basket ili se bavim muzikom.</p>
+            </article>
+            <a href="bio.html"><button>Detaljnije o meni <i class="fas fa-arrow-alt-circle-right"></i></button></a>
+        </section>
 
-			if(navigator.getUserMedia){
-				navigator.getUserMedia({video:true}, streamWebCam, throwError);
-			}
+        <section class="pocetna2">
+            <h2><i class="far fa-images"></i><br>Deo Galerije</h2>
+            <br>
+            <div class="galerija">
+                <img src="img/5.jpg" alt="Slika 1">
+                <img src="img/6.jpg" alt="Slika 2">
+                <img src="img/3.jpg" alt="Slika 3">
+                <img src="img/7.jpg" alt="Slika 4">
+            </div>
+            <br>
+            <a href="galerija.html"><button>Više u Galeriji <i class="fas fa-arrow-alt-circle-right"></i></button></a>
+        </section>
 
-			function streamWebCam (stream) {
-				video.src = window.URL.createObjectURL(stream);
-				video.play();
-			}
+        <footer>
+            <h2>Društvene mreže</h2>
+            <a href="https://www.github.com/lukanici" target="_blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.facebook.com/lukanici" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.twitter.com/lukanici" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <p><b>lukanici</b>@gmail.com</p>
+            <p>Copyright &copy; <b>Luka Nićiforović</b> NRT-44/17</p>
+        </footer>
+    </div>
 
-			function throwError (e) {
-				alert(e.name);
-			}
+    <a href="#"><button id="idiGore"><i class="fas fa-arrow-alt-circle-up"></i></button></a>
 
-			function snap () {
-				canvas.width = video.clientWidth;
-				canvas.height = video.clientHeight;
-				context.drawImage(video, 0, 0);
-			}
-		</script>
+    <script src="js/script.js"></script>
+</body>
 </html>

@@ -56,6 +56,7 @@ nav {
     width: 100%;
     background: var(--bela);
     height: 60px;
+    overflow: hidden;
 }
 
 nav ul {
@@ -414,7 +415,10 @@ footer p {
     }
 
     #meni {
-        display: none;
+        /*display: none;*/
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s ease-out;
     }
 
     nav ul li {
@@ -425,7 +429,7 @@ footer p {
         flex-direction: column;
     }
 
-    .pocetna1 article p {
+    .pocetna1 article p, .pocetna2 article p {
         margin: 20px 30px;
     }
 
@@ -448,5 +452,15 @@ footer p {
 
     .hobi {
         flex-direction: column;
+    }
+
+    nav ul li:active {
+        background: var(--bela);
+        color: var(--tcrvena);
+    }
+
+    nav ul li:hover {
+        background: var(--tcrvena);
+        color: var(--bela);
     }
 }
