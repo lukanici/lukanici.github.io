@@ -453,14 +453,4 @@ footer p {
     .hobi {
         flex-direction: column;
     }
-
-    nav ul li:active {
-        background: blue; /*var(--bela);*/
-        color: var(--tcrvena);
-    }
-
-    nav ul li:hover {
-        background: yellow; /* var(--tcrvena);*/
-        color: var(--bela);
-    }
 }
